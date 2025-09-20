@@ -2,6 +2,7 @@
   "/api/auth/session/route": "/api/auth/session",
   "/_not-found/page": "/_not-found",
   "/test-tailwind/page": "/test-tailwind",
-  "/page": "/",
-  "/login/page": "/login"
+  "/dashboard/page": "/dashboard",
+  "/login/page": "/login",
+  "/page": "/"
 }
