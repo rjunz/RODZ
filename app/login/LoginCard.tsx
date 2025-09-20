@@ -12,7 +12,7 @@ export default function LoginCard({
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-primary/10 flex items-center justify-center p-4">
       <div className="w-full max-w-md rounded-2xl border border-border bg-background shadow-sm">
-        <div className="p-8 text-center space-y-6">
+        <div className="p-6 sm:p-8 text-center space-y-6">
           <div className="flex justify-center">
             <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow">
               {/* Bot icon simples */}
@@ -32,7 +32,7 @@ export default function LoginCard({
           </div>
 
           {error && (
-            <div className="text-sm rounded-md border border-red-300/60 bg-red-100/50 text-red-600 px-3 py-2">
+            <div className="text-sm rounded-md border border-destructive/20 bg-destructive/5 text-destructive px-3 py-2">
               {error === '1' ? 'Não foi possível autenticar.' : error}
             </div>
           )}
@@ -40,7 +40,7 @@ export default function LoginCard({
           {/* Inicia o OAuth de verdade */}
           <a
             href={loginHref}
-            className="w-full h-12 inline-flex items-center justify-center gap-2 rounded-md bg-[#5865F2] hover:bg-[#4752C4] text-white font-medium transition-colors"
+            className="w-full h-12 inline-flex items-center justify-center gap-2 rounded-md bg-primary hover:bg-primary/90 text-primary-foreground font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
           >
             <DiscordLogoIcon className="h-5 w-5" />
             <span>Entrar com Discord</span>
