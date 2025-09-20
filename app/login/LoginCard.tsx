@@ -31,8 +31,12 @@ export default function LoginCard({
           </div>
         )}
 
-        <SocialButton asChild provider="discord" icon={<DiscordLogoIcon />}>
-          <a href={loginHref}>Entrar com Discord</a>
+        <SocialButton 
+          provider="discord" 
+          icon={<DiscordLogoIcon />}
+          onClick={() => window.location.href = loginHref}
+        >
+          Entrar com Discord
         </SocialButton>
 
         <p className="mt-4 text-gray-500 text-sm">Faça login com sua conta Discord para acessar a plataforma</p>

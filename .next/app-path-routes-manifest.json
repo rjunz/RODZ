@@ -3,6 +3,6 @@
   "/_not-found/page": "/_not-found",
   "/dashboard/page": "/dashboard",
   "/test-tailwind/page": "/test-tailwind",
-  "/page": "/",
-  "/login/page": "/login"
+  "/login/page": "/login",
+  "/page": "/"
 }
