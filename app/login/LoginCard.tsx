@@ -1,6 +1,7 @@
 'use client';
 
 import { DiscordLogoIcon } from '@radix-ui/react-icons';
+import { SocialButton } from "@/components/ui/social-button";
 
 export default function LoginCard({
   error,
@@ -30,14 +31,9 @@ export default function LoginCard({
           </div>
         )}
 
-        <a
-          href={loginHref}
-          className="inline-flex items-center justify-center gap-3 h-12 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-purple-300"
-          aria-label="Entrar com Discord"
-        >
-          <DiscordLogoIcon className="w-5 h-5" />
-          <span>Entrar com Discord</span>
-        </a>
+        <SocialButton asChild provider="discord" icon={<DiscordLogoIcon />}>
+          <a href={loginHref}>Entrar com Discord</a>
+        </SocialButton>
 
         <p className="mt-4 text-gray-500 text-sm">Faça login com sua conta Discord para acessar a plataforma</p>
       </div>
