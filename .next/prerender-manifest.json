@@ -50,6 +50,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/buttons": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/buttons",
+      "dataRoute": "/buttons.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/dashboard": {
       "experimentalBypassFor": [
         {
@@ -78,8 +102,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "84e1192a64d80fd8b56348696e4bb537",
-    "previewModeSigningKey": "49d47a631615fb29b8f16e1acf0b0a95529d34f35751284aaeb1356bbba5a099",
-    "previewModeEncryptionKey": "a786f31aa8d8b11150760a60430a82dbc08a9c5f060f0504803a14d2e76c6320"
+    "previewModeId": "5952fc233544cd1e3d7d10d10fc8dc35",
+    "previewModeSigningKey": "ab2f4d0606d8414be9b82ec9ea277e26302439a7ec1c17d641bd9013636f0927",
+    "previewModeEncryptionKey": "3e98d184dbf396f9601f5ddd9ed42e25cb67b54f929104b4902fd0b086318fd7"
   }
 }
