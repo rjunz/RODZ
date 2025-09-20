@@ -1,6 +1,7 @@
 {
   "/api/auth/session/route": "/api/auth/session",
   "/_not-found/page": "/_not-found",
-  "/login/page": "/login",
-  "/page": "/"
+  "/test-tailwind/page": "/test-tailwind",
+  "/page": "/",
+  "/login/page": "/login"
 }

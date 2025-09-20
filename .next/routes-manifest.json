@@ -43,6 +43,12 @@
       "regex": "^/login(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/test-tailwind",
+      "regex": "^/test\\-tailwind(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/test\\-tailwind(?:/)?$"
     }
   ],
   "dataRoutes": [],

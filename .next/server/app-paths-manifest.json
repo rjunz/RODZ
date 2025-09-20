@@ -1,6 +1,7 @@
 {
   "/api/auth/session/route": "app/api/auth/session/route.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/login/page": "app/login/page.js",
-  "/page": "app/page.js"
+  "/test-tailwind/page": "app/test-tailwind/page.js",
+  "/page": "app/page.js",
+  "/login/page": "app/login/page.js"
 }
