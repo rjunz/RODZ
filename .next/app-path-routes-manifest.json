@@ -1,6 +1,6 @@
 {
-  "/api/auth/session/route": "/api/auth/session",
   "/favicon.ico/route": "/favicon.ico",
+  "/api/auth/session/route": "/api/auth/session",
   "/_not-found/page": "/_not-found",
   "/page": "/",
   "/login/page": "/login"
