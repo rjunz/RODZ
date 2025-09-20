@@ -1,24 +1,15 @@
-'use client';
-import { useSession } from './_hooks/useSession';
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  const { data, status } = useSession();
+export const dynamic = 'force-dynamic';
 
-  if (status === 'loading') {
-    return <main style={{ padding: 24 }}>Carregando…</main>;
-  }
-  if (status === 'unauth') {
-    return (
-      <main style={{ padding: 24 }}>
-        <a href="/login">Entrar</a>
-      </main>
-    );
-  }
+export default async function Dashboard() {
+  const jar = await cookies();
+  if (!jar.get('rodz_session')) redirect('/login');
 
   return (
     <main style={{ padding: 24 }}>
-      <h1>Bem-vindo, {data?.name ?? data?.username}</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <h1>Dashboard</h1>
       <form action="/api/auth/logout" method="post">
         <button>Sair</button>
       </form>
