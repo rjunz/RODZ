@@ -1,9 +1,8 @@
 {
-  "/_not-found/page": "/_not-found",
   "/api/auth/session/route": "/api/auth/session",
+  "/_not-found/page": "/_not-found",
   "/dashboard/page": "/dashboard",
   "/test-tailwind/page": "/test-tailwind",
-  "/buttons/page": "/buttons",
-  "/login/page": "/login",
-  "/page": "/"
+  "/page": "/",
+  "/login/page": "/login"
 }

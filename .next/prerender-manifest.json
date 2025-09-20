@@ -1,30 +1,6 @@
 {
   "version": 4,
   "routes": {
-    "/test-tailwind": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/test-tailwind",
-      "dataRoute": "/test-tailwind.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/_not-found": {
       "initialStatus": 404,
       "experimentalBypassFor": [
@@ -41,30 +17,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/_not-found",
       "dataRoute": "/_not-found.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/buttons": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/buttons",
-      "dataRoute": "/buttons.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -97,13 +49,37 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
+    },
+    "/test-tailwind": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/test-tailwind",
+      "dataRoute": "/test-tailwind.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "d72dd9f80c471d126185f891fe4350ec",
-    "previewModeSigningKey": "057ca073625ab5435e343449078bf2c12b0a62817fecbf7d46d664581c8f911a",
-    "previewModeEncryptionKey": "b2a7fff76408c999584f0f878b424b6c03a137e7b787fb475127621be07f5e8a"
+    "previewModeId": "9524a848b13d8dd3887b287cfe61ab54",
+    "previewModeSigningKey": "ef74603464f0a0d4cf717b370f6d8d1818191e743b4b8d7c4719950ebe211618",
+    "previewModeEncryptionKey": "d2de6f96faa9b6b04346bd78141addb4ff0a7fa76ee6052f0ba05897b2c010fe"
   }
 }
