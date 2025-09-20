@@ -32,10 +32,16 @@ export default function Header({ title = "Rodz", showLoginButton = true }: Heade
           </nav>
 
           <div className="flex items-center space-x-4">
-            {showLoginButton && (
+            {showLoginButton ? (
               <Button asChild>
                 <Link href="/login">Entrar</Link>
               </Button>
+            ) : (
+              <form action="/api/auth/logout" method="post">
+                <Button type="submit" variant="outline">
+                  Sair
+                </Button>
+              </form>
             )}
           </div>
         </div>
