@@ -7,6 +7,15 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Lato', 'Inter', 'ui-sans-serif', 'system-ui'],
+        serif: ['Georgia', 'Times New Roman', 'serif'],
+        mono: ['Monaco', 'Consolas', 'monospace'],
+        poppins: ['Poppins', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        lato: ['Lato', 'sans-serif'],
+      },
       colors: {
         border: 'oklch(0.922 0 0)',
         input: 'oklch(0.922 0 0)',

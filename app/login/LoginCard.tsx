@@ -11,35 +11,82 @@ export default function LoginCard({
   loginHref: string;
 }) {
   return (
-    <main className="min-h-screen grid place-items-center p-4 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50">
-      <div className="w-full max-w-md bg-white border border-gray-200 rounded-2xl p-8 text-center shadow-lg">
-        <div className="w-18 h-18 mx-auto mb-4 rounded-2xl grid place-items-center text-white bg-purple-600 shadow-lg">
-          {/* Bot icon simples */}
-          <svg viewBox="0 0 24 24" className="w-10 h-10" aria-hidden fill="currentColor">
-            <rect x="3" y="6" width="18" height="12" rx="6" />
-            <circle cx="9" cy="12" r="1.5" fill="#fff" />
-            <circle cx="15" cy="12" r="1.5" fill="#fff" />
-          </svg>
-        </div>
+    <main className="min-h-screen grid place-items-center p-4 bg-background text-foreground">
+      <div className="w-full max-w-lg rounded-lg p-8 text-center shadow-lg bg-card">
+        
+      <div
+        className="
+          grid place-items-center mx-auto mb-4 shadow-lg
+          w-20 h-20 rounded-lg overflow-hidden
+          bg-cover bg-center bg-no-repeat
+          ring-always
+          transition-all duration-200
+        "
+        style={{ backgroundImage: 'url(https://imgur.com/50RofGo.jpg)' }}
+        aria-hidden="true"
+      />
 
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Bem-vindo ao Rodz</h1>
-        <p className="text-gray-600 mb-4">Plataforma para comprar e personalizar bots Discord</p>
+
+        <h1 className="mb-2 text-3xl font-semibold">
+          Welcome back!
+        </h1>
+
+        <p className="mb-4 text-muted-foreground">
+          Entre com sua conta Discord para gerenciar seus bots.
+        </p>
 
         {error && (
-          <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+          <div
+            className="
+              mb-4 p-3 rounded-lg text-sm border
+              bg-destructive text-destructive-foreground border-border
+            "
+            role="alert"
+          >
             {error === '1' ? 'Não foi possível autenticar.' : error}
           </div>
         )}
 
         <SocialButton 
           provider="discord" 
+          size="lg"
+          className="w-full"
           icon={<DiscordLogoIcon />}
-          onClick={() => window.location.href = loginHref}
+          onClick={() => (window.location.href = loginHref)}
         >
-          Entrar com Discord
+          Continuar com Discord
         </SocialButton>
 
-        <p className="mt-4 text-gray-500 text-sm">Faça login com sua conta Discord para acessar a plataforma</p>
+        <div className="mt-8 mb-6 flex items-center gap-4 text-foreground/80">
+          <span className="flex-1 h-px bg-border/40" />
+          <h2 className="text-base font-medium">Acesso seguro</h2>
+          <span className="flex-1 h-px bg-border/40" />
+        </div>
+
+        <div className="mb-6 flex flex-wrap justify-center gap-3">
+          <button className="px-4 py-2 rounded-full border border-accent/30 text-accent hover:bg-accent/10 transition-colors">
+            Gestão de Bots
+          </button>
+          <button className="px-4 py-2 rounded-full border border-accent/30 text-accent hover:bg-accent/10 transition-colors">
+            Analytics
+          </button>
+          <button className="px-4 py-2 rounded-full border border-accent/30 text-accent hover:bg-accent/10 transition-colors">
+            Configurações
+          </button>
+        </div>
+
+        <p className="mt-4 text-sm text-muted-foreground">
+          Ao entrar, você concorda com nossos{' '}
+          <a href="/terms" className="text-accent hover:underline">
+            Termos de Uso
+          </a>{' '}
+          e{' '}
+          <a href="/privacy" className="text-accent hover:underline">
+            Política de Privacidade
+          </a>
+          .
+        </p>
+
       </div>
     </main>
   );
