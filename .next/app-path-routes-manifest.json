@@ -2,6 +2,6 @@
   "/favicon.ico/route": "/favicon.ico",
   "/api/auth/session/route": "/api/auth/session",
   "/_not-found/page": "/_not-found",
-  "/page": "/",
-  "/login/page": "/login"
+  "/login/page": "/login",
+  "/page": "/"
 }

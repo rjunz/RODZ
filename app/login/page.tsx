@@ -16,7 +16,9 @@ export default async function LoginPage({
   const sp = await searchParams;
   const errorMsg = sp?.error ? decodeURIComponent(sp.error) : '';
   const nextPath = sp?.next?.startsWith('/') ? sp.next : '/dashboard';
-  const loginHref = `/api/auth/discord/login?next=${encodeURIComponent(nextPath)}`;
+
+  const api = process.env.API_BASE_URL || 'https://ar.rjunz.com';
+  const loginHref = `${api}/auth/discord/login?next=${encodeURIComponent(nextPath)}`;
 
   return <LoginCard error={errorMsg} loginHref={loginHref} />;
 }

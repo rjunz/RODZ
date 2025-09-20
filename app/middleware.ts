@@ -3,31 +3,22 @@ import type { NextRequest } from 'next/server';
 
 export function middleware(req: NextRequest) {
   const token = req.cookies.get('rodz_session')?.value;
+  const path = req.nextUrl.pathname;
 
-  // rotas protegidas
-  const PROTECTED = [/^\/dashboard(\/.*)?$/];
-
-  const pathname = req.nextUrl.pathname;
-  const needsAuth = PROTECTED.some((re) => re.test(pathname));
+  const protectedRoutes = [/^\/dashboard(\/.*)?$/];
+  const needsAuth = protectedRoutes.some((re) => re.test(path));
 
   if (needsAuth && !token) {
-    const url = new URL('/login', req.url);
-    url.searchParams.set('next', pathname); // opcional
-    return NextResponse.redirect(url);
+    const to = new URL('/login', req.url);
+    to.searchParams.set('next', path);
+    return NextResponse.redirect(to);
   }
-
-  // se já logado e acessar /login, manda p/ dashboard
-  if (pathname === '/login' && token) {
+  if (path === '/login' && token) {
     return NextResponse.redirect(new URL('/dashboard', req.url));
   }
-
   return NextResponse.next();
 }
 
-// defina quais rotas o middleware observa (evita rodar em /_next, /api, etc.)
 export const config = {
-  matcher: [
-    '/login',
-    '/dashboard/:path*'
-  ],
+  matcher: ['/login', '/dashboard/:path*'],
 };
